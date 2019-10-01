@@ -1,3 +1,97 @@
 body {
-    background-image: url(/src/main/resources/assets/songrBackground.jpg);
+    background-image: url(/assets/songrBackground.jpg);
+    background-size: cover;
+    color: #eee;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    width: 100%;
+    box-shadow: 3px;
+    text-align: center;
+}
+
+#appName {
+    width: 30%;
+    font-family: 'Allura';
+    font-size: 4rem;
+    color: rgb(250, 68, 211);
+    text-decoration: none;
+}
+
+.links {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #eee;
+    font-family: 'Cabin';
+    color: rgb(52, 219, 248);
+}
+
+#navLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+#mid {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+#albums {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px 25px;
+}
+
+.album li {
+    margin: 5px 0px;
+    font-family: 'Cabin';
+    color: rgb(207, 248, 59);
+    font-size: 1.5rem;
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+}
+
+#catchphrase {
+    font-family: 'Pacifico';
+    color: rgb(250, 68, 211);
+    font-size: 5rem;
+}
+
+#description {
+    color: rgb(52, 219, 248);
+    font-size: 1.4rem;
+    font-family: 'Cabin';
+    margin: 25px 0px;
+}
+
+.button {
+    font-family: 'Cabin';
+    font-size: 1.5rem;
+    background: rgb(252, 114, 194);
+    color: #eee;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    box-shadow: 1px 1px 1px 1px;
+    text-decoration: none;
+    width: 20%;
+    margin: auto;
 }

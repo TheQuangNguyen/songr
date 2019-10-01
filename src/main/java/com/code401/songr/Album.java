@@ -1,11 +1,11 @@
 package com.code401.songr;
 
 public class Album {
-    String title;
-    String artist;
-    int songCount;
-    int length;
-    String imageURL;
+    public String title;
+    public String artist;
+    public int songCount;
+    public int length;
+    public String imageURL;
 
     public Album(String title, String artist, int songCount, int length, String imageURL) {
         this.title = title;

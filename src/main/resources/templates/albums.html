@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Songr App</title>
+    <title>Songr App: Albums</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <body>
     <nav>
-        <h2 id="appName">Songr</h2>
+        <a href="/" id="appName">Songr</a>
         <div id="navLinks">
             <a href="/albums" class="links">Your Albums</a>
             <a href="/hello" class="links">Welcome</a>
@@ -21,8 +21,22 @@
             <a href="#" class="links">Log In </a>
         </div>
     </nav>
-    <section id="mid">
-        <h1 id="catchphrase">Hello <span th:text="${name}"></span></h1>
+    <section id="albums">
+        <ul th:each="album: ${albums}" class="album">
+            <li><img th:src="${album.imageURL}"></li>
+            <li>
+                <p th:text="${album.title}"></p>
+            </li>
+            <li>
+                <p>By: <span th:text="${album.artist}"></span></p>
+            </li>
+            <li>
+                <p>Number of Tracks: <span th:text="${album.songCount}"></span></p>
+            </li>
+            <li>
+                <p>Album Length: <span th:text="${album.length}"></span> minutes</p>
+            </li>
+        </ul>
     </section>
 </body>
 
