@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songr App: Albums</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="/" id="appName">Songr</a>
+        <div id="navLinks">
+            <a href="/albums" class="links">Your Albums</a>
+            <a href="/hello" class="links">Welcome</a>
+            <a href="#" class="links">Sign Up</a>
+            <a href="#" class="links">Log In </a>
+        </div>
+    </nav>
+    <section id="albums">
+        <ul th:each="album: ${albums}" class="album">
+            <li><img th:src="${album.imageURL}"></li>
+            <li>
+                <p>Title: <span class="descriptor" th:text="${album.title}"></span></p>
+            </li>
+            <li>
+                <p>By: <span class="descriptor" th:text="${album.artist}"></span></p>
+            </li>
+            <li>
+                <p>Number of Tracks: <span class="descriptor" th:text="${album.songCount}"></span>
+                </p>
+            </li>
+            <li>
+                <p>Album Length: <span class="descriptor" th:text="${album.length}"> minutes</span>
+                </p>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>

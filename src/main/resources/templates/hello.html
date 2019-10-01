@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songr App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <h2 id="appName">Songr</h2>
+        <div id="navLinks">
+            <a href="/albums" class="links">Your Albums</a>
+            <a href="/hello" class="links">Welcome</a>
+            <a href="#" class="links">Sign Up</a>
+            <a href="#" class="links">Log In </a>
+        </div>
+    </nav>
+    <section id="mid">
+        <h1 id="catchphrase">Hello <span th:text="${name}"></span></h1>
+    </section>
+</body>
+
+</html>
