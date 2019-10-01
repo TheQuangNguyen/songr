@@ -50,14 +50,14 @@ nav {
     margin: auto;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 15px 25px;
+    margin-top: 15px;
 }
 
 .album li {
     margin: 5px 0px;
     font-family: 'Cabin';
-    color: rgb(207, 248, 59);
     font-size: 1.5rem;
+    color: rgb(250, 68, 211);
 }
 
 .album {
@@ -94,4 +94,8 @@ nav {
     text-decoration: none;
     width: 20%;
     margin: auto;
+}
+
+.descriptor {
+    color: rgb(207, 248, 59);
 }

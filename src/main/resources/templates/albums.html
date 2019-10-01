@@ -25,16 +25,18 @@
         <ul th:each="album: ${albums}" class="album">
             <li><img th:src="${album.imageURL}"></li>
             <li>
-                <p th:text="${album.title}"></p>
+                <p>Title: <span class="descriptor" th:text="${album.title}"></span></p>
             </li>
             <li>
-                <p>By: <span th:text="${album.artist}"></span></p>
+                <p>By: <span class="descriptor" th:text="${album.artist}"></span></p>
             </li>
             <li>
-                <p>Number of Tracks: <span th:text="${album.songCount}"></span></p>
+                <p>Number of Tracks: <span class="descriptor" th:text="${album.songCount}"></span>
+                </p>
             </li>
             <li>
-                <p>Album Length: <span th:text="${album.length}"></span> minutes</p>
+                <p>Album Length: <span class="descriptor" th:text="${album.length}"> minutes</span>
+                </p>
             </li>
         </ul>
     </section>
