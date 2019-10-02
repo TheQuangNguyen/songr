@@ -18,7 +18,7 @@ nav {
 #appName {
     width: 30%;
     font-family: 'Allura';
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgb(250, 68, 211);
     text-decoration: none;
 }
@@ -51,12 +51,13 @@ nav {
     display: flex;
     justify-content: space-evenly;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .album li {
     margin: 5px 0px;
     font-family: 'Cabin';
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(250, 68, 211);
 }
 
@@ -65,8 +66,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(5, 5, 5, 0.6);
+    color: rgba(0, 0, 0, 0.5);
     padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px;
+    max-width: 20%;
+    margin: 15px;
 }
 
 #catchphrase {
@@ -79,7 +85,7 @@ nav {
     color: rgb(52, 219, 248);
     font-size: 1.4rem;
     font-family: 'Cabin';
-    margin: 25px 0px;
+    margin: 15px 0px;
 }
 
 .button {
@@ -89,13 +95,45 @@ nav {
     color: #eee;
     border-radius: 5px;
     border: none;
-    padding: 3px;
+    padding: 3px 10px;
     box-shadow: 1px 1px 1px 1px;
     text-decoration: none;
-    width: 20%;
     margin: auto;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .descriptor {
     color: rgb(207, 248, 59);
+}
+
+#albumForm {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+}
+
+#or {
+    font-size: 3rem;
+    color: rgb(235, 252, 4);
+    font-family: 'Pacifico';
+    margin: 25px 0px;
+}
+
+input {
+    font-family: 'Cabin';
+    background: rgb(207, 248, 59);
+    color: rgba(19, 15, 250, 0.8);
+    text-align: center;
+    margin-bottom: 20px;
+    border: none;
+    padding: 3px;
+    box-shadow: 1px 1px 1px 0px;
+}
+
+img {
+    max-width: 100%;
 }
