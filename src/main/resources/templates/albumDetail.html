@@ -12,15 +12,6 @@
 </head>
 
 <body>
-<!--    <nav>-->
-<!--        <a href="/" id="appName">Songr</a>-->
-<!--        <div id="navLinks">-->
-<!--            <a href="/albums" class="links">My Albums</a>-->
-<!--            <a href="/hello" class="links">Welcome</a>-->
-<!--            <a href="#" class="links">Sign Up</a>-->
-<!--            <a href="#" class="links">Log In </a>-->
-<!--        </div>-->
-<!--    </nav>-->
 
     <nav th:replace="fragments/common :: navbar"></nav>
 
@@ -43,7 +34,12 @@
             </li>
         </ul>
 
-        <form action="/albums" method="POST" id="albumForm">
+        <ul class="songs">
+            <li class="song" th:each="song: ${album.songs}">[[${song.getTrackNumber()}]]. [[${song.getTitle()}]] ~
+                [[${song.getLength()}]] min</li>
+        </ul>
+
+        <form action="/albums" method="POST" class="albumForm">
             <input type="text" name="title" placeholder="Title">
             <input type="text" name="artist" placeholder="Artist">
             <input type="number" name="songCount" placeholder="Number Of Songs In Album">

@@ -112,8 +112,7 @@ nav {
 .albumForm {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 30%;
+    max-width: 50%;
 }
 
 #or {
@@ -132,6 +131,7 @@ input {
     border: none;
     padding: 3px;
     box-shadow: 1px 1px 1px 0px;
+    width: 100%;
 }
 
 img {
@@ -142,4 +142,19 @@ img {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.song {
+    font-family: 'Cabin';
+    font-size: 1.2rem;
+    color: rgb(207, 248, 59);
+    margin: 5px;
+}
+
+.songs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(5, 5, 5, 0.6);
 }

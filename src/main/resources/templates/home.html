@@ -12,38 +12,31 @@
 </head>
 
 <body>
-    <nav>
-        <h1 id="appName">Songr</h2>
-            <div id="navLinks">
-                <a href="/albums" class="links">My Albums</a>
-                <a href="/hello" class="links">Welcome</a>
-                <a href="#" class="links">Sign Up</a>
-                <a href="#" class="links">Log In </a>
-            </div>
-    </nav>
+    <nav th:replace="fragments/common :: navbar"></nav>
+
     <section id="mid">
         <h1 id="catchphrase">Best Music App</h1>
         <p id="description">Tens of songs available</p>
         <a href="/albums" class="button">Go to Your Albums</a>
         <h2 id="or">OR</h2>
-        <div id = "forms">
+        <div id="forms">
             <form action="/albums" method="POST" class="albumForm">
                 <input type="text" name="title" placeholder="Title">
                 <input type="text" name="artist" placeholder="Artist">
                 <input type="number" name="songCount" placeholder="Number Of Songs In Album">
-                <input type="number" name="length" placeholder="Length of Album">
+                <input type="number" name="length" placeholder="Length of Album" step="0.1">
                 <input type="text" name="imageURL" , placeholder="Image URL For Album Cover">
                 <input type="submit" value="Add Album" class="button">
             </form>
             <form action="/songs" method="POST" class="albumForm">
                 <input type="text" name="title" placeholder="Title">
-                <input type="number" name="length" placeholder="Song Length">
+                <input type="number" name="length" placeholder="Song Length" step="0.1">
                 <input type="number" name="trackNumber" placeholder="Track Number">
-                <input type="number" name="album" placeholder="Song's Album">
+                <input type="text" name="albumTitle" placeholder="Song's Album">
                 <input type="submit" value="Add Song" class="button">
             </form>
         </div>
-        
+
     </section>
 </body>
 

@@ -35,4 +35,8 @@ public class Song {
     public int getTrackNumber() {
         return trackNumber;
     }
+
+    public String getAlbumTitle() {
+        return album.title;
+    }
 }

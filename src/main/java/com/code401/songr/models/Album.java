@@ -15,7 +15,7 @@ public class Album {
     public long id;
 
     @OneToMany(mappedBy = "album")
-    List<Song> songs;
+    public List<Song> songs;
 
     protected Album() {}
 
