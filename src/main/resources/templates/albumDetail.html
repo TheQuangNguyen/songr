@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songr App: Album Detail</title>
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!--    <nav>-->
+<!--        <a href="/" id="appName">Songr</a>-->
+<!--        <div id="navLinks">-->
+<!--            <a href="/albums" class="links">My Albums</a>-->
+<!--            <a href="/hello" class="links">Welcome</a>-->
+<!--            <a href="#" class="links">Sign Up</a>-->
+<!--            <a href="#" class="links">Log In </a>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+    <nav th:replace="fragments/common :: navbar"></nav>
+
+    <section id="albums">
+        <ul class="album">
+            <li><img th:src="${album.imageURL}"></li>
+            <li>
+                <p>Title: <span class="descriptor" th:text="${album.title}"></span></p>
+            </li>
+            <li>
+                <p>By: <span class="descriptor" th:text="${album.artist}"></span></p>
+            </li>
+            <li>
+                <p>Number of Tracks: <span class="descriptor" th:text="${album.songCount}"></span>
+                </p>
+            </li>
+            <li>
+                <p>Album Length: <span class="descriptor" th:text="${album.length}"> minutes</span>
+                </p>
+            </li>
+        </ul>
+
+        <form action="/albums" method="POST" id="albumForm">
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="artist" placeholder="Artist">
+            <input type="number" name="songCount" placeholder="Number Of Songs In Album">
+            <input type="number" name="length" placeholder="Length of Album">
+            <input type="text" name="imageURL" placeholder="Image URL For Album Cover">
+            <input type="submit" value="Update Album" class="button">
+        </form>
+    </section>
+</body>
+
+</html>
