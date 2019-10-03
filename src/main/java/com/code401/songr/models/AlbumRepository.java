@@ -6,6 +6,9 @@ import org.springframework.data.repository.query.Param;
 
 // JpaRepository takes in a Type and an id <Type, Identifier Type>
 public interface AlbumRepository extends JpaRepository<Album, Long> {
-    @Query(value="SELECT * FROM album u WHERE u.id = ?1", nativeQuery = true)
+    @Query(value="SELECT * FROM album WHERE id = ?1", nativeQuery = true)
     Album findAlbumById(long id);
+
+    @Query(value="SELECT * FROM album where title = ?1", nativeQuery = true)
+    Album findAlbumByTitle(String title);
 }

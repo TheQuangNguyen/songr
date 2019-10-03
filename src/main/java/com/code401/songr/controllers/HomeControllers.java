@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class OtherControllers {
+public class HomeControllers {
 
     @GetMapping("/")
     public String getHomePage() {
@@ -27,5 +27,8 @@ public class OtherControllers {
         return "hello";
     }
 
-
+    @GetMapping("/error")
+    public String getErrorPage() {
+        return "error";
+    }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songr App: Album Detail</title>
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav th:replace="fragments/common :: navbar"></nav>
+
+    <ul class="songs">
+        <li class="song" th:each="song : ${songs}">
+            <p><span class="descriptor" th:text="${song.getTitle()}"></span> ([[${song.getAlbumTitle()}]]) ~
+                [[${song.getLength()}]] min
+            </p>
+        </li>
+    </ul>
+
+</body>
+
+</html>
