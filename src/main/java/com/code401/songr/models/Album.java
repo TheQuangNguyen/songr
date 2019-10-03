@@ -1,9 +1,7 @@
 package com.code401.songr.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -15,6 +13,9 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
+
+    @OneToMany(mappedBy = "album")
+    List<Song> songs;
 
     protected Album() {}
 

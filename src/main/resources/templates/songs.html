@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+        <title>Songr App: Song</title>
+        <link rel="stylesheet" type="text/css" href="../reset.css">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link href="https://fonts.googleapis.com/css?family=Allura|Cabin|Pacifico|Mr+Dafoe&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <nav th:replace="fragments/common :: navbar"></nav>
+
+    <section id="songs">
+        <p th:each="song : ${songs}">[[${song.getTitle()}]] - [[${song.getLength()}]]</p>
+    </section>
+</body>
+</html>
