@@ -11,5 +11,5 @@ import static junit.framework.TestCase.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SongrApplicationTests {
-    
+
 }

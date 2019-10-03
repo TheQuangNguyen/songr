@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -23,21 +23,23 @@
     </nav>
     <section id="albums">
         <ul th:each="album: ${albums}" class="album">
-            <li><img th:src="${album.imageURL}"></li>
-            <li>
-                <p>Title: <span class="descriptor" th:text="${album.title}"></span></p>
-            </li>
-            <li>
-                <p>By: <span class="descriptor" th:text="${album.artist}"></span></p>
-            </li>
-            <li>
-                <p>Number of Tracks: <span class="descriptor" th:text="${album.songCount}"></span>
-                </p>
-            </li>
-            <li>
-                <p>Album Length: <span class="descriptor" th:text="${album.length}"> minutes</span>
-                </p>
-            </li>
+            <a th:href="${'/albums/' + album.id}">
+                <li><img th:src="${album.imageURL}"></li>
+                <li>
+                    <p>Title: <span class="descriptor" th:text="${album.title}"></span></p>
+                </li>
+                <li>
+                    <p>By: <span class="descriptor" th:text="${album.artist}"></span></p>
+                </li>
+                <li>
+                    <p>Number of Tracks: <span class="descriptor" th:text="${album.songCount}"></span>
+                    </p>
+                </li>
+                <li>
+                    <p>Album Length: <span class="descriptor" th:text="${album.length}"> minutes</span>
+                    </p>
+                </li>
+            </a>
         </ul>
     </section>
 </body>
